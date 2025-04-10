@@ -33,31 +33,31 @@
     <div class="grid grid-cols-2 gap-4">
         <div>
             <label>Bandara Keberangkatan</label>
-            <input type="text" name="departure_airport" class="form-input w-full">
+            <input type="text" name="departure_airport" class="form-input w-full border rounded">
         </div>
         <div>
             <label>Bandara Tujuan</label>
-            <input type="text" name="arrival_airport" class="form-input w-full">
+            <input type="text" name="arrival_airport" class="form-input w-full border rounded">
         </div>
     </div>
     <div class="grid grid-cols-2 gap-4">
         <div>
             <label>Tanggal Berangkat</label>
-            <input type="date" name="departure_date" class="form-input w-full">
+            <input type="date" name="departure_date" class="form-input w-full border rounded">
         </div>
         <div>
             <label>Jam Berangkat</label>
-            <input type="time" name="departure_time" class="form-input w-full">
+            <input type="time" name="departure_time" class="form-input w-full border rounded">
         </div>
     </div>
     <div class="grid grid-cols-2 gap-4">
         <div>
             <label>Tanggal Tiba</label>
-            <input type="date" name="arrival_date" class="form-input w-full">
+            <input type="date" name="arrival_date" class="form-input w-full border rounded">
         </div>
         <div>
             <label>Jam Tiba</label>
-            <input type="time" name="arrival_time" class="form-input w-full">
+            <input type="time" name="arrival_time" class="form-input w-full border rounded">
         </div>
     </div>
     @endif
@@ -66,11 +66,11 @@
     @if($entity->name === 'Pemesanan Hotel')
     <div>
         <label>Lokasi</label>
-        <input type="text" name="location" class="form-input w-full" required>
+        <input type="text" name="location" class="form-input w-full border rounded" required>
     </div>
     <div>
         <label>Tipe Kamar</label>
-        <input type="text" name="room_type" class="form-input w-full" required>
+        <input type="text" name="room_type" class="form-input w-full border rounded" required>
     </div>
     @endif
 
@@ -78,25 +78,25 @@
     @if($entity->name === 'Pendaftaran Kursus')
     <div>
         <label>Materi</label>
-        <input type="text" name="materi" class="form-input w-full">
+        <input type="text" name="materi" class="form-input w-full border rounded">
     </div>
     <div>
         <label>Pengajar</label>
-        <input type="text" name="pengajar" class="form-input w-full">
+        <input type="text" name="pengajar" class="form-input w-full border rounded">
     </div>
     <div class="grid grid-cols-2 gap-4">
         <div>
             <label>Tanggal Mulai</label>
-            <input type="date" name="start_date" class="form-input w-full">
+            <input type="date" name="start_date" class="form-input w-full border rounded">
         </div>
         <div>
             <label>Tanggal Selesai</label>
-            <input type="date" name="end_date" class="form-input w-full">
+            <input type="date" name="end_date" class="form-input w-full border rounded">
         </div>
     </div>
     <div>
         <label>Jam Kursus</label>
-        <input type="time" name="jam_kursus" class="form-input w-full">
+        <input type="time" name="jam_kursus" class="form-input w-full border rounded">
     </div>
     @endif
 

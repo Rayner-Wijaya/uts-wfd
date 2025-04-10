@@ -16,18 +16,18 @@ class Booking extends Model
         'ref_code',
         'confirmed_at',
 
-        // ✈️ PENERBANGAN
-        'boarding_time',
+        // // ✈️ PENERBANGAN
+        // 'boarding_time',
 
-        // 🏨 HOTEL / PENGINAPAN
-        'checkin_date',
-        'checkout_date',
+        // // 🏨 HOTEL / PENGINAPAN
+        // 'checkin_date',
+        // 'checkout_date',
         'guests',
 
-        // 📚 KURSUS
-        'start_date',
-        'end_date',
-        'jam_kursus',
+        // // 📚 KURSUS
+        // 'start_date',
+        // 'end_date',
+        // 'jam_kursus',
     ];
 
     public function item()

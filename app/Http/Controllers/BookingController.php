@@ -22,22 +22,30 @@ class BookingController extends Controller
 
 
     public function store(Request $request, $itemId)
-{
-    $item = Item::findOrFail($itemId);
+    {
+        $item = Item::findOrFail($itemId);
 
-    $validated = $request->validate([
-        'guest_name' => 'required|string|max:255',
-        'contact' => 'required|string|max:50',
-        'ref_code' => 'nullable|string|max:50',
-    ]);
+        $baseRules = [
+            'guest_name' => 'required|string|max:255',
+            'contact' => 'required|string|max:50',
+            'ref_code' => 'nullable|string|max:50',
+        ];
 
-    $validated['item_id'] = $item->id;
+        // Tambahkan validasi khusus hotel
+        if ($item->entity->name === 'Pemesanan Hotel') {
+            $baseRules['checkin_date'] = 'required|date';
+            $baseRules['checkout_date'] = 'required|date|after_or_equal:checkin_date';
+        }
 
-    Booking::create($validated);
+        $validated = $request->validate($baseRules);
+        $validated['item_id'] = $item->id;
 
-    return redirect()->route('bookings.index', $item->id)
-                     ->with('success', 'Booking berhasil dibuat!');
-}
+        Booking::create($validated);
+
+        return redirect()->route('bookings.index', $item->id)
+            ->with('success', 'Booking berhasil dibuat!');
+    }
+
 
 
     public function index($itemId)

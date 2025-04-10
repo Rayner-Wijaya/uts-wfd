@@ -42,7 +42,7 @@
 
         {{-- ==================== ✈️ PENERBANGAN ==================== --}}
         @if($item->entity->name === 'Penerbangan')
-            <div class="grid grid-cols-2 gap-4">
+            {{-- <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label class="block font-semibold text-sm mb-1">Tanggal Boarding</label>
                     <input type="date" name="boarding_date" class="w-full border rounded-md px-3 py-2">
@@ -51,7 +51,7 @@
                     <label class="block font-semibold text-sm mb-1">Jam Boarding</label>
                     <input type="time" name="boarding_time" class="w-full border rounded-md px-3 py-2">
                 </div>
-            </div>
+            </div> --}}
         @endif
 
         {{-- ==================== 🏨 PENGINAPAN ==================== --}}
@@ -75,7 +75,7 @@
 
         {{-- ==================== 📚 KURSUS ==================== --}}
         @if($item->entity->name === 'Pendaftaran Kursus')
-            <div class="grid grid-cols-2 gap-4">
+            {{-- <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label class="block font-semibold text-sm mb-1">Tanggal Mulai</label>
                     <input type="date" name="start_date" class="w-full border rounded-md px-3 py-2">
@@ -88,8 +88,8 @@
             <div>
                 <label class="block font-semibold text-sm mb-1">Jam Kursus</label>
                 <input type="time" name="jam_kursus" class="w-full border rounded-md px-3 py-2">
-            </div>
-        @endif
+            </div> --}}
+        @endif 
 
         <div class="flex justify-between pt-4">
             <a href="{{ route('entities.show', $item->entity_id) }}"
