@@ -8,4 +8,5 @@ php artisan make:model entity -mfs // membuat model enitity (entity diganti jadi
 php artisan make:controller EntityController --resource // membuat sebuah controller resource (sudah ada function CRUD)
 php artisan make:controller EntityController // membuat controller biasa
 php artisan migrate // membuat tabel di database
-php artisan migrate:fresh // restart semua di database dan membuat tabel ulang
+php artisan migrate:fresh --seed // restart semua di database dan membuat tabel ulang dengan seeder yang sudah ditentukan
+php artisan key:generate // untuk generate key pada application (dalam file .env)
